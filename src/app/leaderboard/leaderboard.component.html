@@ -10,25 +10,11 @@
     </h1>
   </div>
   <div class="list">
-    <div class="list__person">
-      <img class="person__image" src=""/>
-      <p class="person__name">Yarin Vaknin</p>
+    <div class="list__person" *ngFor="let repo of reposData">
+      <img class="person__image" src="https://img.pngio.com/parent-directory-avatar-2png-avatar-png-256_256.png"/>
+      <p class="person__name">{{repo.name}}</p>
       <p class="person__networth">
-        3351 Commits
-      </p>
-    </div>
-    <div class="list__person">
-      <img class="person__image" src=""/>
-      <p class="person__name">Arik Furman</p>
-      <p class="person__networth">
-        2100 Commits
-      </p>
-    </div>
-    <div class="list__person">
-      <img class="person__image" src=""/>
-      <p class="person__name">Arik Furman</p>
-      <p class="person__networth">
-        2100 Commits
+        {{repo.points}} <small>a{{criteria}}</small>
       </p>
     </div>
   </div>
