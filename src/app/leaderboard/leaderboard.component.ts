@@ -7,8 +7,9 @@ export interface RepoContributors {
 
 const REPOS: RepoContributors[] = [
   {name: 'MGF', points: 34},
-  {name: 'MGF-logs', points: 34},
-  {name: 'Polaris', points: 34}
+  {name: 'MGF-logs', points: 25},
+  {name: 'Polaris', points: 20},
+  {name: 'Polaris-Logs', points: 15}
 ];
 
 
