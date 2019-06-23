@@ -71,22 +71,10 @@
   </aside>
 
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        TOP REPOSITORIES
-        <small>BY CONTRIBUTORS COUNT</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Top Repositories</li>
-      </ol>
-    </section>
-
     <!-- Main content -->
     <section class="content">
-      <app-top-repos [topRepos]="[{repositoryName:'Test', contributorsCount:15, topContributor:'Arik'}, {repositoryName:'Iaf.Test.REpo', contributorsCount:10, topContributor:'Avi'} , {repositoryName:'YoloMAnadnadna', contributorsCount:3, topContributor:'Loser'}]"></app-top-repos>
-
+      <app-leaderboard title="התורמים" theme="blue"></app-leaderboard>
+      <app-leaderboard title="הפרויקטים" theme="gold"></app-leaderboard>
     </section>
     <!-- /.content -->
   </div>
