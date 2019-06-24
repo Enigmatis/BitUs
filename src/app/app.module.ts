@@ -9,6 +9,7 @@ import { RepoTableComponent } from './repo-table/repo-table.component';
 import { TopReposComponent } from './top-repos/top-repos.component';
 import { HomeComponent } from './home/home.component';
 import {LeaderboardComponent} from './leaderboard/leaderboard.component';
+import {ProfilePageComponent} from './profile-page/profile-page.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {LeaderboardComponent} from './leaderboard/leaderboard.component';
     RepoTableComponent,
     TopReposComponent,
     HomeComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,
