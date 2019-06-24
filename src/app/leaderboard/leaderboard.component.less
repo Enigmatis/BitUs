@@ -75,9 +75,9 @@ html {
   .list {
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 350px;
     padding: 20px 0 40px;
-    //overflow-y: scroll;
+    overflow-y: scroll;
 
     &__person {
       display: flex;
@@ -93,7 +93,7 @@ html {
 
       .person__image {
         position: relative;
-        max-width: 77px;
+        max-width: 57px;
         height: auto;
         margin-right: 22px;
         border: 10px solid #f5f6fa;
@@ -101,15 +101,15 @@ html {
       }
 
       .person__name {
-        font-size: 23px;
-        max-width: 80px;
+        font-size: 18px;
+        max-width: 60px;
         color: #979cb0;
       }
 
       .person__networth {
         margin-left: auto;
-        font-size: 26px;
-        fobnt-weight: 700;
+        font-size: 15px;
+        font-weight: 700;
         color: #4cd5af;
 
         span {
@@ -177,5 +177,18 @@ html {
 @keyframes fadeIn {
   from {
     opacity: 0;
+  }
+}
+
+
+@keyframes slide {
+  0% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: -100px;
+  }
+  100% {
+    margin-left: -200px;
   }
 }
