@@ -8,18 +8,15 @@ const DATA: SimpleData[] = [
   {title: 'Polaris-Logs', value: 15}
 ];
 
-
 @Component({
-  selector: 'app-repos-list-card',
-  templateUrl: './repos-list-card.component.html',
-  styleUrls: ['./repos-list-card.component.less']
+  selector: 'app-repos-leaderboard',
+  templateUrl: './repos-leaderboard.component.html',
+  styleUrls: ['./repos-leaderboard.component.less']
 })
-export class ReposListCardComponent implements OnInit {
-  @Input() title: string;
-  @Input() theme: string;
-  @Input() criteria: string;
+export class ReposLeaderboardComponent implements OnInit {
+  constructor() {
+  }
 
-  constructor() { }
   data = DATA;
 
   ngOnInit() {
