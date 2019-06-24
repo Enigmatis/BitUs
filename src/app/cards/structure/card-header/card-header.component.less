@@ -1,0 +1,51 @@
+.header-gold {
+  background-image: linear-gradient(
+    to right,
+    #f9d313,
+    #f4be05,
+    #efc121,
+    #e9b419,
+    #e4a61e
+  );
+}
+
+.header-blue {
+  background-image: linear-gradient(
+    to right,
+    #5b7cf9,
+    #5274f4,
+    #4a6bef,
+    #4163e9,
+    #375be4
+  );
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 25px;
+  color: #e8ecfd;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+
+  &__icon {
+    max-width: 50px;
+    height: auto;
+    opacity: 0.7;
+  }
+
+  &__title {
+    margin-left: auto;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4.5px;
+
+    span {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+    }
+  }
+}

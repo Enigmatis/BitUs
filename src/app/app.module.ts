@@ -5,21 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatTableModule} from '@angular/material';
-import { RepoTableComponent } from './repo-table/repo-table.component';
-import { TopReposComponent } from './top-repos/top-repos.component';
 import { HomeComponent } from './home/home.component';
-import {LeaderboardComponent} from './leaderboard/leaderboard.component';
+import {LeaderboardComponent} from './home/leaderboard/leaderboard.component';
 import {ProfilePageComponent} from './profile-page/profile-page.component';
+import {ProfileCardComponent} from './profile-page/user-profile-card/user-card.component';
+import {ReposListCardComponent} from './profile-page/repos-list-card/repos-list-card.component';
+import {UserProfileCardModule} from './profile-page/user-profile-card/user-profile-card.module';
+import {ReposListCardModule} from './profile-page/repos-list-card/repos-list-card.module';
+import {CardsStructureModule} from './cards/structure/card-structure.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RepoTableComponent,
-    TopReposComponent,
     HomeComponent,
     LeaderboardComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    ProfileCardComponent,
+    ReposListCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,10 @@ import {ProfilePageComponent} from './profile-page/profile-page.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatTableModule
+    MatTableModule,
+    UserProfileCardModule,
+    ReposListCardModule,
+    CardsStructureModule
   ],
   providers: [],
   bootstrap: [AppComponent]

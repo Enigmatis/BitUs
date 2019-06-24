@@ -1,4 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
+export interface ContributorData {
+  totalCommits: number;
+  commitsPerWeek: number;
+  totalNumberOfReposContributedTo: number;
+}
 
 export interface RepoContributors {
   name: string;
@@ -12,21 +17,18 @@ const REPOS: RepoContributors[] = [
   {name: 'Polaris-Logs', points: 15}
 ];
 
-
 @Component({
-  selector: 'app-leaderboard',
-  templateUrl: './leaderboard.component.html',
-  styleUrls: ['./leaderboard.component.less']
+  selector: 'app-repos-list-card',
+  templateUrl: './repos-list-card.component.html',
+  styleUrls: ['./repos-list-card.component.less']
 })
-export class LeaderboardComponent implements OnInit {
+export class ReposListCardComponent implements OnInit {
   @Input() title: string;
   @Input() theme: string;
   @Input() criteria: string;
 
+  constructor() { }
   reposData = REPOS;
-
-  constructor() {
-  }
 
   ngOnInit() {
   }

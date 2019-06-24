@@ -1,0 +1,13 @@
+<div class="header" [ngClass]="{'header-blue': theme==='blue', 'header-gold': theme==='gold'}">
+  <img *ngIf="iconUrl!==''"
+    class="header__icon"
+    src="{{iconUrl}}"
+  />
+  <i *ngIf="faIcon!==''"
+    class="header__icon {{faIcon}}"
+  ></i>
+  <h1 class="header__title">
+    {{title}}
+    <span>{{description}}</span>
+  </h1>
+</div>
