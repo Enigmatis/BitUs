@@ -1,0 +1,21 @@
+<div class="app">
+  <div class="header" [ngClass]="{'header-blue': theme==='blue', 'header-gold': theme==='gold'}">
+    <img
+      class="header__icon"
+      src="https://user-images.githubusercontent.com/23297041/55285200-a24e9b00-538f-11e9-8990-d49a162824d1.png"
+    />
+    <h1 class="header__title">
+      {{title}}
+      <span>המובילים</span>
+    </h1>
+  </div>
+  <div class="list">
+    <div class="list__person" *ngFor="let repo of reposData">
+      <img class="person__image" src="https://img.pngio.com/parent-directory-avatar-2png-avatar-png-256_256.png"/>
+      <p class="person__name">{{repo.name}}</p>
+      <p class="person__networth">
+        {{repo.points}} <small>{{criteria}}</small>
+      </p>
+    </div>
+  </div>
+</div>

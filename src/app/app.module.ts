@@ -8,6 +8,7 @@ import {MatButtonModule, MatCheckboxModule, MatTableModule} from '@angular/mater
 import { RepoTableComponent } from './repo-table/repo-table.component';
 import { TopReposComponent } from './top-repos/top-repos.component';
 import { HomeComponent } from './home/home.component';
+import {LeaderboardComponent} from './leaderboard/leaderboard.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     RepoTableComponent,
     TopReposComponent,
-    HomeComponent
+    HomeComponent,
+    LeaderboardComponent
   ],
   imports: [
     BrowserModule,

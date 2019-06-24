@@ -71,22 +71,21 @@
   </aside>
 
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        TOP REPOSITORIES
-        <small>BY CONTRIBUTORS COUNT</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Top Repositories</li>
-      </ol>
-    </section>
-
     <!-- Main content -->
     <section class="content">
-      <app-top-repos [topRepos]="[{repositoryName:'Test', contributorsCount:15, topContributor:'Arik'}, {repositoryName:'Iaf.Test.REpo', contributorsCount:10, topContributor:'Avi'} , {repositoryName:'YoloMAnadnadna', contributorsCount:3, topContributor:'Loser'}]"></app-top-repos>
-
+      <div class="col-md-4 col-sm-12 text-left">
+        <app-leaderboard title="התורמים" theme="blue" criteria="commits"></app-leaderboard>
+      </div>
+      <div class="col-md-4 col-sm-12 text-center" dir="rtl">
+        <br>
+        <img src="../../assets/ohub.png" class="img-responsive tada ofek-logo"><br><br>
+        <h2>כבר תרמת.. לקוד פתוח ביחידה?</h2>
+        <h4>האתר נוצר במטרה לתת למפתחים באופק אינדיקציה לגבי כמות תרומת הקוד שלהם לפרויקטים, ולייצר גיימיפיקציה עבור הפיתוח ביחידה</h4>
+      </div>
+      <div class="col-md-4 col-sm-12 text-right">
+        <app-leaderboard class="text-left" title="הפרויקטים" theme="gold" criteria="contributors"></app-leaderboard>
+      </div>
+      <br>
     </section>
     <!-- /.content -->
   </div>
