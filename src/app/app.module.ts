@@ -16,6 +16,7 @@ import {CardsStructureModule} from './cards/structure/card-structure.module';
 import {ContributorsLeaderboardComponent} from './home/contributors-leaderboard/contributors-leaderboard.component';
 import {ChartsModule} from 'ng2-charts';
 import {LanguagesChartComponent} from './profile-page/languages-chart/languages-chart.component';
+import {NgxChartsModule} from '@swimlane/ngx-charts';
 
 
 @NgModule({
@@ -39,7 +40,7 @@ import {LanguagesChartComponent} from './profile-page/languages-chart/languages-
     UserProfileCardModule,
     ReposListCardModule,
     CardsStructureModule,
-    ChartsModule
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

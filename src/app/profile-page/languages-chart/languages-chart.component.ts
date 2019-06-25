@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ChartType, ChartOptions } from 'chart.js';
-import { Label } from 'ng2-charts';
+import {Component, OnInit} from '@angular/core';
+import {ChartType, ChartOptions} from 'chart.js';
+import {Label} from 'ng2-charts';
+import {SingleSeries} from "@swimlane/ngx-charts";
 
 @Component({
   selector: 'app-languages-chart',
@@ -8,68 +9,98 @@ import { Label } from 'ng2-charts';
   styleUrls: ['./languages-chart.component.less']
 })
 export class LanguagesChartComponent implements OnInit {
-  // Pie
-  public pieChartOptions: ChartOptions = {
-    responsive: true,
-    legend: {
-      position: 'top',
-    },
-    plugins: {
-      datalabels: {
-        formatter: (value, ctx) => {
-          const label = ctx.chart.data.labels[ctx.dataIndex];
-          return label;
-        },
-      },
-    }
-  };
-  public pieChartLabels: Label[] = [['Download', 'Sales'], ['In', 'Store', 'Sales'], 'Mail Sales'];
-  public pieChartData: number[] = [300, 500, 100];
-  public pieChartType: ChartType = 'pie';
-  public pieChartLegend = true;
-  public pieChartColors = [
+  // options
+  showXAxis = true;
+  showYAxis = true;
+  gradient = false;
+  showLegend = true;
+  legendTitle = 'Legend';
+  legendPosition = 'right';
+  showXAxisLabel = true;
+  tooltipDisabled = false;
+  showText = true;
+  xAxisLabel = 'Country';
+  showYAxisLabel = true;
+  yAxisLabel = 'GDP Per Capita';
+  showGridLines = true;
+  innerPadding = '10%';
+  barPadding = 8;
+  groupPadding = 16;
+  roundDomains = false;
+  maxRadius = 10;
+  minRadius = 3;
+  showSeriesOnHover = true;
+  roundEdges = true;
+  animations = true;
+  xScaleMin: any;
+  xScaleMax: any;
+  yScaleMin: number;
+  yScaleMax: number;
+  showDataLabel = false;
+  noBarWhenZero = true;
+  trimXAxisTicks = true;
+  trimYAxisTicks = true;
+  rotateXAxisTicks = true;
+  maxXAxisTickLength = 16;
+  maxYAxisTickLength = 16;
+  colorScheme = 'cool';
+
+  single: SingleSeries = [
     {
-      backgroundColor: ['rgba(255,0,0,0.3)', 'rgba(0,255,0,0.3)', 'rgba(0,0,255,0.3)'],
+      name: 'Germany',
+      value: 40632,
+      extra: {
+        code: 'de'
+      }
     },
+    {
+      name: 'United States',
+      value: 50000,
+      extra: {
+        code: 'us'
+      }
+    },
+    {
+      name: 'France',
+      value: 36745,
+      extra: {
+        code: 'fr'
+      }
+    },
+    {
+      name: 'United Kingdom',
+      value: 36240,
+      extra: {
+        code: 'uk'
+      }
+    },
+    {
+      name: 'Spain',
+      value: 33000,
+      extra: {
+        code: 'es'
+      }
+    },
+    {
+      name: 'Italy',
+      value: 35800,
+      extra: {
+        code: 'it'
+      }
+    }
   ];
 
-  constructor() { }
+
+  // pie
+  showLabels = true;
+  explodeSlices = false;
+  doughnut = false;
+  arcWidth = 0.25;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
-  // events
-  public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
-    console.log(event, active);
-  }
-
-  public chartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
-    console.log(event, active);
-  }
-
-  changeLabels() {
-    const words = ['hen', 'variable', 'embryo', 'instal', 'pleasant', 'physical', 'bomber', 'army', 'add', 'film',
-      'conductor', 'comfortable', 'flourish', 'establish', 'circumstance', 'chimney', 'crack', 'hall', 'energy',
-      'treat', 'window', 'shareholder', 'division', 'disk', 'temptation', 'chord', 'left', 'hospital', 'beef',
-      'patrol', 'satisfied', 'academy', 'acceptance', 'ivory', 'aquarium', 'building', 'store', 'replace', 'language',
-      'redeem', 'honest', 'intention', 'silk', 'opera', 'sleep', 'innocent', 'ignore', 'suite', 'applaud', 'funny'];
-    const randomWord = () => words[Math.trunc(Math.random() * words.length)];
-    this.pieChartLabels = Array.apply(null, { length: 3 }).map(_ => randomWord());
-  }
-
-  addSlice() {
-    this.pieChartLabels.push(['Line 1', 'Line 2', 'Line 3']);
-    this.pieChartData.push(400);
-    this.pieChartColors[0].backgroundColor.push('rgba(196,79,244,0.3)');
-  }
-
-  removeSlice() {
-    this.pieChartLabels.pop();
-    this.pieChartData.pop();
-    this.pieChartColors[0].backgroundColor.pop();
-  }
-
-  changeLegendPosition() {
-    this.pieChartOptions.legend.position = this.pieChartOptions.legend.position === 'left' ? 'top' : 'left';
-  }
 }
