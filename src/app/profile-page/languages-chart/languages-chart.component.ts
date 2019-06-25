@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ChartType, ChartOptions} from 'chart.js';
 import {Label} from 'ng2-charts';
-import {SingleSeries} from "@swimlane/ngx-charts";
+import {SingleSeries} from '@swimlane/ngx-charts';
 
 @Component({
   selector: 'app-languages-chart',
@@ -12,7 +12,7 @@ export class LanguagesChartComponent implements OnInit {
   // options
   showXAxis = true;
   showYAxis = true;
-  gradient = false;
+  gradient = true;
   showLegend = true;
   legendTitle = 'Legend';
   legendPosition = 'right';
@@ -43,57 +43,43 @@ export class LanguagesChartComponent implements OnInit {
   rotateXAxisTicks = true;
   maxXAxisTickLength = 16;
   maxYAxisTickLength = 16;
-  colorScheme = 'cool';
+  colorScheme = 'aqua';
 
   single: SingleSeries = [
     {
-      name: 'Germany',
-      value: 40632,
+      name: 'Java',
+      value: 30,
       extra: {
         code: 'de'
       }
     },
     {
-      name: 'United States',
-      value: 50000,
+      name: 'C#',
+      value: 25,
       extra: {
         code: 'us'
       }
     },
     {
-      name: 'France',
-      value: 36745,
+      name: 'TypeScript',
+      value: 25,
       extra: {
         code: 'fr'
       }
     },
     {
-      name: 'United Kingdom',
-      value: 36240,
+      name: 'JavaScript',
+      value: 20,
       extra: {
         code: 'uk'
-      }
-    },
-    {
-      name: 'Spain',
-      value: 33000,
-      extra: {
-        code: 'es'
-      }
-    },
-    {
-      name: 'Italy',
-      value: 35800,
-      extra: {
-        code: 'it'
       }
     }
   ];
 
 
   // pie
-  showLabels = true;
-  explodeSlices = false;
+  showLabels = false;
+  explodeSlices = true;
   doughnut = false;
   arcWidth = 0.25;
 
