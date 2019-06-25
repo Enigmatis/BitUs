@@ -1,11 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatTableModule} from '@angular/material';
-import { HomeComponent } from './home/home.component';
+import {HomeComponent} from './home/home.component';
 import {ReposLeaderboardComponent} from './home/repos-leaderboard/repos-leaderboard.component';
 import {ProfilePageComponent} from './profile-page/profile-page.component';
 import {ProfileCardComponent} from './profile-page/user-profile-card/user-card.component';
@@ -14,6 +14,8 @@ import {UserProfileCardModule} from './profile-page/user-profile-card/user-profi
 import {ReposListCardModule} from './profile-page/repos-list-card/repos-list-card.module';
 import {CardsStructureModule} from './cards/structure/card-structure.module';
 import {ContributorsLeaderboardComponent} from './home/contributors-leaderboard/contributors-leaderboard.component';
+import {ChartsModule} from 'ng2-charts';
+import {LanguagesChartComponent} from './profile-page/languages-chart/languages-chart.component';
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import {ContributorsLeaderboardComponent} from './home/contributors-leaderboard/
     ProfilePageComponent,
     ProfileCardComponent,
     ReposListCardComponent,
+    LanguagesChartComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +38,11 @@ import {ContributorsLeaderboardComponent} from './home/contributors-leaderboard/
     MatTableModule,
     UserProfileCardModule,
     ReposListCardModule,
-    CardsStructureModule
+    CardsStructureModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
