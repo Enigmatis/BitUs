@@ -1,13 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {SimpleData} from '../../cards/structure/card-body/card-simple-list/card-simple-list.component';
-
-const DATA: SimpleData[] = [
-  {title: 'MGF', value: 34},
-  {title: 'MGF-logs', value: 25},
-  {title: 'Polaris', value: 20},
-  {title: 'Polaris-Logs', value: 15}
-];
-
+import {Repo} from "../../types/types";
 
 @Component({
   selector: 'app-repos-list-card',
@@ -18,11 +11,17 @@ export class ReposListCardComponent implements OnInit {
   @Input() title: string;
   @Input() theme: string;
   @Input() criteria: string;
+  @Input() repos: Repo[];
+  data: SimpleData[] = [];
 
-  constructor() { }
-  data = DATA;
+  constructor() {
+  }
+
 
   ngOnInit() {
+    this.repos.forEach(repo => {
+      this.data.push({title: repo.name, value: repo.commitsCount, id: repo.name});
+    });
   }
 
 }
