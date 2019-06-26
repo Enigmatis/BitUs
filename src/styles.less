@@ -10,4 +10,20 @@ body {
   margin: 0;
   background-color: #ecf0f5 !important;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  &::-webkit-scrollbar {
+    width: 12px;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #fefefe;
+    border-radius: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 68px;
+    border-radius: 14px;
+    background-color: #f1f2f6;
+    cursor: pointer;
+  }
 }
