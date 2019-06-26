@@ -11,16 +11,24 @@ import {UserData} from '../types/types';
 export class ProfilePageComponent implements OnInit {
   id: string;
 
-  userData: UserData = {
-    id: 's8000703',
-    name: 'ירין וקנין',
-    totalCommitsCount: 5030,
-    commitsPerWeek: 300,
-    repos: [{name: 'MGF', commitsCount: 34}, {name: 'MGF-Logs', commitsCount: 26}, {name: 'Polaris', commitsCount: 20}]
-  };
+  userData: UserData;
 
   constructor(private route: ActivatedRoute) {
-    this.route.params.subscribe((params: any) => this.id = params.id);
+    this.route.params.subscribe((params: any) => this.retrieve(params.id));
+  }
+
+  retrieve(id: string) {
+    // call server to get user data
+    this.userData = {
+      id: 's8000111',
+      name: 'ישראל ישראלי',
+      totalCommitsCount: 5030,
+      commitsPerWeek: 300,
+      repos: [{name: 'MGF', commitsCount: 34}, {name: 'MGF-Logs', commitsCount: 26}, {
+        name: 'Polaris',
+        commitsCount: 20
+      }]
+    };
   }
 
   ngOnInit() {
