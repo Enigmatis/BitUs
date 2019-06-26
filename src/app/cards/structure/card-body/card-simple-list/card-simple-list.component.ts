@@ -1,8 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 export interface SimpleData {
   title: string;
   value: number;
+  id: string;
 }
 
 
@@ -14,11 +16,17 @@ export interface SimpleData {
 export class CardSimpleListComponent implements OnInit {
   @Input() criteria: string;
   @Input() data: SimpleData[];
+  @Input() url: string;
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
   }
 
+  moveTo(url: string, id: string) {
+    if (url) {
+      this.router.navigateByUrl(url + '/' + id);
+    }
+  }
 }

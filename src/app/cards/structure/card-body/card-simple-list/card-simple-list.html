@@ -1,5 +1,5 @@
 <div class="list">
-  <div class="list__person" *ngFor="let one of data">
+  <div class="list__person" (click)="moveTo(url, one.id)" *ngFor="let one of data">
     <img class="person__image" src="https://img.pngio.com/parent-directory-avatar-2png-avatar-png-256_256.png"/>
     <p class="person__name">{{one.title}}</p>
     <p class="person__networth">

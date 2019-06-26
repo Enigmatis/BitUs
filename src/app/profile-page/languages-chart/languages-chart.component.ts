@@ -14,7 +14,7 @@ export class LanguagesChartComponent implements OnInit {
   showYAxis = true;
   gradient = true;
   showLegend = true;
-  legendTitle = 'Legend';
+  legendTitle = 'שפות';
   legendPosition = 'right';
   showXAxisLabel = true;
   tooltipDisabled = false;
