@@ -1,11 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-export interface ContributorData {
-  totalCommits: number;
-  commitsPerWeek: number;
-  totalNumberOfReposContributedTo: number;
-}
-
-const data: ContributorData = {totalCommits: 4200, commitsPerWeek: 300, totalNumberOfReposContributedTo: 5};
+import {ContributorData, UserData} from '../../types/types';
 
 @Component({
   selector: 'app-user-card',
@@ -16,11 +10,20 @@ export class ProfileCardComponent implements OnInit {
   @Input() title: string;
   @Input() theme: string;
   @Input() criteria: string;
+  @Input() userData: UserData;
 
-  constructor() { }
-  data = data;
+  contributorData: ContributorData;
+
+  constructor() {
+  }
+
 
   ngOnInit() {
+    this.contributorData = {
+      totalCommits: this.userData.totalCommitsCount,
+      commitsPerWeek: this.userData.commitsPerWeek,
+      totalNumberOfReposContributedTo: this.userData.repos.length
+    };
   }
 
 }

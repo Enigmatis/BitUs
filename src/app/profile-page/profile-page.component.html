@@ -1,11 +1,12 @@
 <div dir="rtl">
   <div class="col-12 col-sm-12 col-md-12 col-lg-4 text-center" style="float:right">
     <app-user-card dir="ltr" class="text-left" title="הפרויקטים" theme="gold"
+                   [userData]="userData"
                    criteria="contributors"></app-user-card>
   </div>
 
   <div class="col-12 col-sm-12 col-md-12 col-lg-4 text-center" style="float:right">
-    <app-repos-list-card dir="ltr" class="text-left" title="הפרויקטים" theme="blue"
+    <app-repos-list-card [repos]="userData.repos" dir="ltr" class="text-left" title="הפרויקטים" theme="blue"
                          criteria="קומיטים"></app-repos-list-card>
   </div>
   <div class="col-12 col-sm-12 col-md-12 col-lg-4 text-center" style="float:right">
