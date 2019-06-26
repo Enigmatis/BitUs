@@ -1,0 +1,21 @@
+<div class="app">
+  <app-card-header theme="blue" title="שפות תכנה" description="של המשתמש" faIcon="fas fa-code fa-3x"></app-card-header>
+  <div style="height:300px">
+    <ngx-charts-pie-chart
+      class="chart-container"
+      [scheme]="colorScheme"
+      [results]="single"
+      [animations]="animations"
+      [legend]="showLegend"
+      [legendTitle]="legendTitle"
+      [legendPosition]="legendPosition"
+      [explodeSlices]="explodeSlices"
+      [labels]="showLabels"
+      [doughnut]="doughnut"
+      [arcWidth]="arcWidth"
+      [gradient]="gradient"
+      [tooltipDisabled]="tooltipDisabled"
+    >
+    </ngx-charts-pie-chart>
+  </div>
+</div>

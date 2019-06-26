@@ -1,0 +1,27 @@
+<div class="list">
+  <div class="list__person">
+    <i class="fa fa-code fa-3x fa-pull-right"></i>
+    <p class="person__name">
+      {{contributorData.totalCommits}}
+      <small>קומיטים</small>
+    </p>
+    <p class="person__networth">סה"כ תרומות קוד</p>
+  </div>
+  <div class="list__person">
+    <i class="fas fa-chart-line fa-3x fa-pull-right"></i>
+
+    <p class="person__name">
+      {{contributorData.commitsPerWeek}}
+      <small>קומיטים לשבוע</small>
+    </p>
+    <p class="person__networth">קצב תרומה</p>
+  </div>
+  <div class="list__person">
+    <i class="fas fa-laptop-code fa-3x fa-pull-right"></i>
+    <p class="person__name">
+      {{contributorData.totalNumberOfReposContributedTo}}
+      <small>מאגרי קוד</small>
+    </p>
+    <p class="person__networth">כמות פרויקטים שתרם להם</p>
+  </div>
+</div>
