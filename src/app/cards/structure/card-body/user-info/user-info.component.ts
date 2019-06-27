@@ -1,10 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-
-export interface ContributorData {
-  totalCommits: number;
-  commitsPerWeek: number;
-  totalNumberOfReposContributedTo: number;
-}
+import {ContributorData} from '../../../../types/types';
 
 @Component({
   selector: 'app-user-info',
