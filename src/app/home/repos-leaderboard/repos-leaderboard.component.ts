@@ -15,12 +15,12 @@ const DATA: SimpleData[] = [
 })
 export class ReposLeaderboardComponent implements OnInit {
   @Input() type: string;
+  @Input() theme: string;
 
   title = 'הפרוקטים';
   description: string;
   criteria: string;
   faIcon: string;
-  theme: string;
 
   constructor() {
   }
@@ -32,12 +32,10 @@ export class ReposLeaderboardComponent implements OnInit {
       this.description = 'המובילים';
       this.criteria = 'קומיטס';
       this.faIcon = 'fas fa-medal';
-      this.theme = 'blue';
     } else if (this.type === 'contributors') {
       this.description = 'המשפיעים';
       this.criteria = 'תורמים';
       this.faIcon = 'fas fa-award';
-      this.theme = 'pink';
     }
   }
 

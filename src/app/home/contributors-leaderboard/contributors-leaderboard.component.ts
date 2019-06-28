@@ -21,7 +21,7 @@ export class ContributorsLeaderboardComponent implements OnInit {
   description: string;
   criteria: string;
   faIcon: string;
-  theme: string;
+  @Input() theme: string;
 
   data = DATA;
 
@@ -34,13 +34,11 @@ export class ContributorsLeaderboardComponent implements OnInit {
       this.description = 'המובילים';
       this.criteria = 'קומיטס';
       this.faIcon = 'fas fa-trophy';
-      this.theme = 'gold';
     } else if (this.type === 'repos') {
       this.title = 'התורמים';
       this.description = 'המשפיעים';
       this.criteria = 'מאגרי קוד';
       this.faIcon = 'fas fa-crown';
-      this.theme = 'purple';
     }
   }
 
