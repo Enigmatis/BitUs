@@ -1,25 +1,26 @@
 <section id="leader-boards">
   <div class="row">
-    <div class="col-4 text-left">
-      <app-repos-leaderboard></app-repos-leaderboard>
+    <div class="col-3 text-center">
+      <app-repos-leaderboard type="contributors"></app-repos-leaderboard>
     </div>
-    <div class="col-4 text-center" dir="rtl">
-      <br>
-      <img src="../../assets/ohub.png" class="img-fluid tada ofek-logo"><br><br>
-      <h3>כבר תרמת.. לקוד פתוח ביחידה?</h3>
-      <h5>האתר נוצר במטרה לתת למפתחים באופק אינדיקציה לגבי כמות תרומת הקוד שלהם לפרויקטים, ולייצר גיימיפיקציה עבור
-        הפיתוח
-        ביחידה</h5>
+    <div class="col-3 text-center">
+      <app-repos-leaderboard type="commits"></app-repos-leaderboard>
     </div>
-    <div class="col-4 text-right">
-      <app-contributors-leaderboard class="text-left"></app-contributors-leaderboard>
+    <div class="col-3 text-center">
+      <app-contributors-leaderboard type="repos"></app-contributors-leaderboard>
     </div>
-    <div class="col-4 text-right" id="leader-boards-second">
-      <app-repos-leaderboard></app-repos-leaderboard>
+    <div class="col-3 text-center">
+      <app-contributors-leaderboard type="commits"></app-contributors-leaderboard>
     </div>
-    <div class="col-4 offset-4 text-left">
-      <app-contributors-leaderboard class="text-left"></app-contributors-leaderboard>
-    </div>
+  </div>
+  <span id="leader-boards-second"></span>
+  <div class="col-12 text-center" dir="rtl">
+    <br>
+    <img src="../../assets/ohub.png" class="img-fluid tada ofek-logo"><br><br>
+    <h3>כבר תרמת.. לקוד פתוח ביחידה?</h3>
+    <h5>האתר נוצר במטרה לתת למפתחים באופק אינדיקציה לגבי כמות תרומת הקוד שלהם לפרויקטים, ולייצר גיימיפיקציה עבור
+      הפיתוח
+      ביחידה</h5>
   </div>
 </section>
 <section id="repos-table">

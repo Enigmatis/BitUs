@@ -1,4 +1,5 @@
 <div class="app">
-  <app-card-header faIcon="fas fa-medal fa-3x" title="הפרויקטים" description="המובילים" theme="gold"></app-card-header>
-  <app-card-simple-list [data]="data" criteria="קומיטס"></app-card-simple-list>
+  <app-card-header faIcon="{{faIcon}} fa-3x" title="{{title}}" description="{{description}}"
+                   theme="{{theme}}"></app-card-header>
+  <app-card-simple-list [data]="data" criteria="{{criteria}}"></app-card-simple-list>
 </div>

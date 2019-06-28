@@ -15,6 +15,13 @@ const DATA: SimpleData[] = [
   styleUrls: ['./contributors-leaderboard.component.less']
 })
 export class ContributorsLeaderboardComponent implements OnInit {
+  @Input() type: string;
+
+  title: string;
+  description: string;
+  criteria: string;
+  faIcon: string;
+  theme: string;
 
   data = DATA;
 
@@ -22,6 +29,19 @@ export class ContributorsLeaderboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (this.type === 'commits') {
+      this.title = 'התורמים';
+      this.description = 'המובילים';
+      this.criteria = 'קומיטס';
+      this.faIcon = 'fas fa-trophy';
+      this.theme = 'gold';
+    } else if (this.type === 'repos') {
+      this.title = 'התורמים';
+      this.description = 'המשפיעים';
+      this.criteria = 'מאגרי קוד';
+      this.faIcon = 'fas fa-crown';
+      this.theme = 'purple';
+    }
   }
 
 }

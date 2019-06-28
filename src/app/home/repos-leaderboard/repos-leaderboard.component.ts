@@ -14,12 +14,31 @@ const DATA: SimpleData[] = [
   styleUrls: ['./repos-leaderboard.component.less']
 })
 export class ReposLeaderboardComponent implements OnInit {
+  @Input() type: string;
+
+  title = 'הפרוקטים';
+  description: string;
+  criteria: string;
+  faIcon: string;
+  theme: string;
+
   constructor() {
   }
 
   data = DATA;
 
   ngOnInit() {
+    if (this.type === 'commits') {
+      this.description = 'המובילים';
+      this.criteria = 'קומיטס';
+      this.faIcon = 'fas fa-medal';
+      this.theme = 'blue';
+    } else if (this.type === 'contributors') {
+      this.description = 'המשפיעים';
+      this.criteria = 'תורמים';
+      this.faIcon = 'fas fa-award';
+      this.theme = 'pink';
+    }
   }
 
 }
