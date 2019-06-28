@@ -1,17 +1,47 @@
-<div class="row">
-  <div class="col-4 text-left">
-    <app-repos-leaderboard></app-repos-leaderboard>
+<section id="leader-boards">
+  <div class="row">
+    <div class="col-4 text-left">
+      <app-repos-leaderboard></app-repos-leaderboard>
+    </div>
+    <div class="col-4 text-center" dir="rtl">
+      <br>
+      <img src="../../assets/ohub.png" class="img-fluid tada ofek-logo"><br><br>
+      <h3>כבר תרמת.. לקוד פתוח ביחידה?</h3>
+      <h5>האתר נוצר במטרה לתת למפתחים באופק אינדיקציה לגבי כמות תרומת הקוד שלהם לפרויקטים, ולייצר גיימיפיקציה עבור
+        הפיתוח
+        ביחידה</h5>
+    </div>
+    <div class="col-4 text-right">
+      <app-contributors-leaderboard class="text-left"></app-contributors-leaderboard>
+    </div>
+    <div class="col-4 text-right" id="leader-boards-second">
+      <app-repos-leaderboard></app-repos-leaderboard>
+    </div>
+    <div class="col-4 offset-4 text-left">
+      <app-contributors-leaderboard class="text-left"></app-contributors-leaderboard>
+    </div>
   </div>
-  <div class="col-4 text-center" dir="rtl">
-    <br>
-    <img src="../../assets/ohub.png" class="img-fluid tada ofek-logo"><br><br>
-    <h3>כבר תרמת.. לקוד פתוח ביחידה?</h3>
-    <h5>האתר נוצר במטרה לתת למפתחים באופק אינדיקציה לגבי כמות תרומת הקוד שלהם לפרויקטים, ולייצר גיימיפיקציה עבור הפיתוח
-      ביחידה</h5>
+</section>
+<section id="repos-table">
+  <div class="row">
+    <div class="col-10 offset-1">
+      <app-card-header faIcon="fab fa-codepen fa-3x" title="כל מאגרי הקוד" description="לפי תורמים" theme="blue"></app-card-header>
+      <app-repos-table></app-repos-table>
+    </div>
   </div>
-  <div class="col-4 text-right">
-    <app-contributors-leaderboard class="text-left"></app-contributors-leaderboard>
-  </div>
-</div>
-<br>
+</section>
 
+<section id="repos-graphs">
+  <div class="row">
+    <div class="col-10 offset-1">
+      <app-card-header faIcon="fas fa-chart-pie fa-3x" title="סטטיסטיקות" description="כלליות" theme="gold"></app-card-header>
+      <div class="col-10 offset-2">
+        <app-graphs></app-graphs>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="col-12">
+  <app-scroll-button [scrollTargets]="['leader-boards', 'leader-boards-second' ,'repos-table', 'repos-graphs']" [scrollDuration]="300"></app-scroll-button>
+</div>

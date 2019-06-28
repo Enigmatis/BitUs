@@ -1,0 +1,35 @@
+
+a {padding-top: 70px;}
+a span {
+  position: fixed;
+  bottom: 10%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 2px solid #90a6ff;
+  border-bottom: 2px solid #90a6ff;
+  transform: rotate(-45deg);
+  animation: sdb05 1.5s infinite;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+
+@keyframes sdb05 {
+  0% {transform: rotate(-45deg) translate(0, 0); opacity: 0;}
+  50% {opacity: 1;}
+  100% {transform: rotate(-45deg) translate(-15px, 15px); opacity: 0;}
+}
+
+.scroll{
+  position: fixed; bottom: 20px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: inline-block;
+  color: #90a6ff !important;
+  transition: opacity .3s;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.scroll:hover{opacity: .5;}
