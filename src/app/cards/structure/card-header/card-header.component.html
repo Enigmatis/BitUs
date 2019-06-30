@@ -1,4 +1,4 @@
-<div class="header" [ngClass]="{'header-blue': theme==='blue', 'header-gold': theme==='gold'}">
+<div class="header" [ngClass]="theme">
   <img *ngIf="iconUrl!==''"
     class="header__icon"
     src="{{iconUrl}}"

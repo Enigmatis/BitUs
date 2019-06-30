@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ChartType, ChartOptions} from 'chart.js';
 import {Label} from 'ng2-charts';
 import {SingleSeries} from '@swimlane/ngx-charts';
@@ -9,6 +9,8 @@ import {SingleSeries} from '@swimlane/ngx-charts';
   styleUrls: ['./languages-chart.component.less']
 })
 export class LanguagesChartComponent implements OnInit {
+  @Input() theme: string;
+
   // options
   showXAxis = true;
   showYAxis = true;
